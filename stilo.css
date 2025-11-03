@@ -26,3 +26,48 @@ button {
         padding: 15px 0;
     }
 }
+
+
+
+/* foto romântica animada */
+.photo-wrap {
+  margin: 20px auto 0;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(81,5,43,0.12);
+  transform-origin: center;
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  display: block;
+  object-fit: cover;
+}
+
+/* efeito ao tocar/hover */
+.photo:hover,
+.photo:active {
+  transform: translateY(-8px) scale(1.02);
+  filter: saturate(1.05);
+}
+
+/* animação sutil de flutuar */
+@keyframes float {
+  0% { transform: translateY(0) rotate(-0.5deg); }
+  50% { transform: translateY(-14px) rotate(0.6deg); }
+  100% { transform: translateY(0) rotate(-0.5deg); }
+}
+
+/* ajustes responsivos */
+@media (max-width: 600px) {
+  .photo-wrap { margin-top: 14px; max-width: 360px; }
+  .photo { border-radius: 10px; }
+}
