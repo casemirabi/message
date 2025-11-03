@@ -16,5 +16,13 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
 
-
+    button {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
